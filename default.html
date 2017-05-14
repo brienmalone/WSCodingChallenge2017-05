@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Williams Sonoma Coding Challenge</title>
+    <link rel="stylesheet" type="text/css" href="./css/site.css" />
+    <script src="./js/site.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="header">
+            <div class="logo"></div>
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li>Cookware
+                </li><li>Cooks' Tools
+                </li><li>Cutlery
+                </li><li>Electrics
+                </li><li>Bakeware
+                </li><li>Food
+                </li><li>Tabletop &amp; Bar
+                </li><li>Homekeeping
+                </li><li>Outdoor
+                </li><li>Sale
+                </li><li>Williams-Sonoma Home
+                </li>
+            </ul>
+        </nav>
+        <div class="breadcrumbs">
+            <ul>
+                <li>Home
+                </li><li>Homekeeping
+                </li><li>Aprons
+                </li><li>Adult Aprons
+                </li><li></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="left-content">
+                <div class="hero">
+                    <img class="hero-image" src="" />
+                </div>
+                <div class="thumbs">
+
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="product">
+                    <h1 class="product-name"></h1>
+                    <div class="product-description"></div>
+                    <div class="product-price"></div>
+                    <input class="qty" type="number" min="1"/>
+                    <button class="add-to-cart">Add to Cart &#9658;</button>
+                </div>
+                <div class="accordion-wrapper">
+                    <div class="twist-open summary">
+						<div class="twist-header">Summary</div>
+						<div class="hide-overflow">
+							<div class="twist-body closed"></div>
+						</div>
+                    </div>
+                    <div class="twist-open dimensions">
+						<div class="twist-header">Dimensions &amp More Info</div>
+						<div class="hide-overflow">
+							<div class="twist-body closed"></div>
+						</div>
+                    </div>
+                    <div class="twist-open shipping">
+						<div class="twist-header">Shipping</div>
+						<div class="hide-overflow">
+							<div class="twist-body closed"></div>
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            //page init code here (in lieu of JQ or other framework)
+
+            var apronVariations = getVariations();
+            loadAccordionBehavior();
+			displayProductDetails(apronVariations[1]); 
+			buildThumbnailDisplay(apronVariations);          
+			toggleAccordion(document.querySelector('.twist-open.summary .twist-header'));			
+        })();
+    </script>
+</body>
+</html>
